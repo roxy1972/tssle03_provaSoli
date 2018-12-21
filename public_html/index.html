@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>PROVA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> PLACE A BIT!!!</div></br>
+        <div> Fai più di 50 e hai vinto!!!!</div></br>
+        Fai il tuo gioco: <input type="text" id="txplaceBit" value="" placeholder=""/> <button id="bt_placeBit" onclick="placeBit()">GIRA</button></br></br>
+        <div id="div_win"> risultato: <button id="bt_win"> win</button> </div></br>
+
+
+
+
+
+
+
+
+    </body>
+</html>
+
+
+<script>
+
+    var numBit;
+    
+    function placeBit() {
+
+        document.getElementById("txplaceBit").value =
+                Math.floor(Math.random() * 100);
+        var txplaceBit = document.getElementById("txplaceBit").value;
+        numBit = Number.parseInt(txplaceBit);
+        if (checkBit()) {
+            document.getElementById("bt_win").style.backgroundColor = "green";
+            document.getElementById("bt_win").innerHTML = "win";
+        } else {
+            document.getElementById("bt_win").style.backgroundColor = "red";
+            document.getElementById("bt_win").innerHTML = "loose";
+        }
+    }
+
+
+    function checkBit() {
+        if (numBit < 50) {
+            return false;
+        } else {
+            return true;
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
